@@ -1,0 +1,121 @@
+.modal__reviews {
+    background: rgba(58, 58, 58, 0.2);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    transition: 0.3s ease;
+}
+
+.open_modal {
+    overflow: hidden;
+
+    .modal__reviews {
+        display: block;
+    }
+}
+
+.modal__block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2C2728;
+    border-radius: 10px;
+    padding: 60px;
+    overflow-y: scroll;
+    height: 700px;
+}
+
+.block__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+
+    img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 89%;
+        height: 2px;
+        background-color: #9b9a9a;
+    }
+}
+
+.review {
+    span {
+        font-weight: 600;
+        border-bottom: 2px solid #FF793D;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 15px;
+        margin-top: 5px;
+    }
+}
+
+.cross {
+    position: absolute;
+    top: 17%;
+    right: 27%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.3s ease;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #FF793D;
+        transform: rotate(45deg);
+    }    
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #FF793D;
+        transform: rotate(-45deg);
+    }
+    
+    &:hover {
+        opacity: 0.6;
+    }
+} 
+
+.title__modal {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.easter_egg {
+    position: relative;
+    width: 40px;
+    height: 220px;
+}

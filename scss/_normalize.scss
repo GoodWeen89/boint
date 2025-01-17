@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  min-width: 320px;
+}
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  border-style: none;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  resize: none;
+  border: none;
+}
+
+button {
+  background: none;
+  bottom: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+input::-moz-placeholder {
+  line-height: 24px;
+  transition: line-height 0.7s ease;
+}
+
+input:-moz-placeholder {
+  line-height: 24px;
+  transition: line-height 0.7s ease;
+}
+
+input[placeholder] {
+  line-height: 24px;
+  transition: line-height 0.7s ease;
+}
+
+input::-webkit-input-placeholder {
+  line-height: 24px;
+  transition: line-height 0.7s ease;
+}
+
+input:-ms-input-placeholder {
+  line-height: 24px;
+  transition: line-height 0.7s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+  line-height: 100px;
+  outline: none;
+}
+
+input:focus::-moz-placeholder {
+  line-height: 100px;
+  outline: none;
+}
+
+input:focus:-moz-placeholder {
+  line-height: 100px;
+  outline: none;
+}
+
+input:focus:-ms-input-placeholder {
+  line-height: 100px;
+  outline: none;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  outline: none;
+}
+
+textarea:focus::-moz-placeholder {
+  opacity: 0;
+  outline: none;
+}
+
+textarea:focus:-moz-placeholder {
+  opacity: 0;
+  outline: none;
+}
+
+textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  outline: none;
+}
+
+a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #2C2728;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h1, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
