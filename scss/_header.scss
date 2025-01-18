@@ -1,34 +1,102 @@
 header {
-    background: #2C2728;
+    background: $main-color;
     padding: 20px 125px;
-    color: white;
-}
-
-.first__block,
-.accordion__block,
-.top_menu,
-.last__block,
-header {
+    color: $color-white;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1600px) {
+        padding: 20px 50px;
+    }
+
+    @media (max-width: 1250px) {
+        padding: 20px 30px;
+    }
+
+    @media (max-width: 650px) {
+        padding: 15px 20px 50px 20px;
+        position: relative;
+    }
 }
 
 option,
 select {
-    color: white;
-    background: #2C2728;
+    color: $color-white;
+    background: $main-color;
     cursor: pointer;
     font-size: 13px;
 }
 
 .burger {
     display: none;
+
+    @media (max-width: 1250px) {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+        transition: 0.3s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $orange-color;
+            transition: 0.3s ease;
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            top: 45%;
+            left: 0;
+            background: $color-white;
+            transition: 0.3s ease;
+        }
+
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $orange-color;
+            transition: 0.3s ease;
+        }
+    }
 }
 
+.burger_active {
+    @media (max-width: 1250px) {
+        .top_menu {
+            margin-left: 0;
+        }
 
+        .burger {
+            &::before {
+                transform: rotate(45deg);
+                top: 43%;
+            }
+    
+            span {
+                transform: scale(0);
+            }
+            
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 40%;
+            }
+        }
+    }
+}
 
-/*---------------------------------------*/
 .logo {
     transform: translateY(-7px);
     transition: 0.3s ease;
@@ -40,29 +108,56 @@ select {
 
 .first__block {
     gap: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1600px) {
+        gap: 25px;
+    }
 }
 
-.accordion__block {
+.language__block {
     gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+        @media (max-width: 650px) {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1600px) {
+        gap: 15px;
+    }
+
+    @media (max-width: 650px) {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        gap: 10px;
+    }
 }
 
-.accordion {
+.language_items {
     position: relative;
     transform: translateY(-2px);
 
     p {
-        color: #FFF;
+        color: $color-white;
         font-size: 13px;
     }
 
     &::after {
         content: '';
         width: 100%;
-        height: 6px;
+        height: 3px;
         left: 0;
-        bottom: -2px;
+        bottom: 0px;
         position: absolute;
-        background-color: #CC5F36;
+        background-color: $orange-color;
     }
 }
 
@@ -88,7 +183,7 @@ select {
         position: absolute;
         width: 2px;
         height: 100%;
-        background-color: white;
+        background-color: $color-white;
         top: 0;
         right: 0px;
         transform: rotate(45deg);
@@ -99,7 +194,7 @@ select {
         position: absolute;
         width: 2px;
         height: 100%;
-        background-color: white;
+        background-color: $color-white;
         top: 0;
         left: 1px;
         transform: rotate(-45deg);
@@ -108,17 +203,63 @@ select {
 
 .top_menu {
     gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1600px) {
+        gap: 20px;
+    }
+
+    @media (max-width: 1250px) {
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: $main-color;
+        width: 100vw;
+        left: 0;
+        top: 70px;
+        padding: 0px 30px 30px 30px;
+        margin-left: -2000px;
+        transition: 0.3s ease;
+        gap: 5px;
+        z-index: 5;
+    }
+
+    @media (max-width: 650px) {
+        top: 95px;
+        padding: 0 20px 20px 20px;
+    }
 }
 
 .menu__link {
-    color: #999294;
+    color: $gray-color;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     transition: color 0.3s ease;
 
     &:hover {
-        color: white;
+        color: $color-white;
+    }
+
+    @media (max-width: 1250px) {
+        color: $color-white;
+        font-size: 14px;
+
+        &:hover {
+            color: $orange-color;
+        }
+    }
+}
+
+.last__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 1250px) {
+        gap: 20px;
     }
 }
 
@@ -131,21 +272,21 @@ select {
     &::after {
         content: '';
         width: 100%;
-        height: 6px;
+        height: 3px;
         left: 0;
-        bottom: -2px;
+        bottom: 0px;
         position: absolute;
-        background-color: #CC5F36;
+        background-color: $orange-color;
     }
 
     a {
         padding: 0;
         transition: color 0.3s ease;
-        color: white;
+        color: $color-white;
         font-size: 13px;
 
         &:hover {
-            color: #999294;
+            color: $gray-color;
         }
     }
 
@@ -153,151 +294,10 @@ select {
         padding: 0 3px;
         font-size: 13px;
     }
-}
 
-
-
-/*---------------------------------------*/
-@media (max-width: 1600px) {
-    header {
-        padding: 20px 50px;
-    }
-
-    .first__block {
-        gap: 25px;
-    }
-
-    .accordion__block {
-        gap: 15px;
-    }
-
-    .top_menu {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 1250px) {
-    header {
-        padding: 20px 30px;
-    }
-
-    .top_menu {
-        position: absolute;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #2C2728;
-        width: 100vw;
-        left: 0;
-        top: 70px;
-        padding: 0px 30px 30px 30px;
-        margin-left: -2000px;
-        transition: 0.3s ease;
-        gap: 5px;
-        z-index: 5;
-    }
-
-    .menu__link {
-        color: white;
-        font-size: 14px;
-
-        &:hover {
-            color: #FF793D;
-        }
-    }
-
-    .last__block {
-        gap: 20px;
-    }
-
-    .burger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 25px;
-        transition: 0.3s ease;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: #FF793D;
-            transition: 0.3s ease;
-        }
-
-        span {
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            top: 45%;
-            left: 0;
-            background: white;
-            transition: 0.3s ease;
-        }
-
-        
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: #FF793D;
-            transition: 0.3s ease;
-        }
-    }
-
-    .burger_active {
-        .top_menu {
-            margin-left: 0;
-        }
-
-        .burger {
-            &::before {
-                transform: rotate(45deg);
-                top: 43%;
-            }
-    
-            span {
-                transform: scale(0);
-            }
-            
-            &::after {
-                transform: rotate(-45deg);
-                bottom: 40%;
-            }
-        }
-    }
-}
-
-@media (max-width: 650px) {
-    header {
-        padding: 15px 20px 50px 20px;
-        position: relative;
-    }
-
-    .accordion__block {
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        gap: 10px;
-
-        p {
-            font-size: 14px;
-        }
-    }
-
-    .enter__block {
+    @media (max-width: 650px) {
         position: absolute;
         right: 20px;
         bottom: 20px;
-    }
-
-    .top_menu {
-        top: 95px;
-        padding: 0 20px 20px 20px;
     }
 }

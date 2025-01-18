@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
 body,
 html {
   margin: 0;
@@ -16,8 +14,7 @@ body {
   min-width: 320px;
 }
 
-form,
-fieldset {
+form {
   margin: 0;
   padding: 0;
   border-style: none;
@@ -35,7 +32,6 @@ img {
 }
 
 input[type="text"],
-input[type="number"],
 select {
   outline: none;
   border: none;
@@ -46,10 +42,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 textarea {
