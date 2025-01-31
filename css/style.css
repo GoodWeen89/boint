@@ -1429,7 +1429,7 @@ select {
   @media (max-width: 1250px) {
     .kit {
       padding: 30px; } }
-  @media (max-width: 1250px) {
+  @media (max-width: 650px) {
     .kit {
       padding: 20px; } }
 
