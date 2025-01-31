@@ -2,13 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     arrowAnimate();
     burgerMenu();
     sliderSwiper();
-    modalOpen();
-    //changeCursor();
+    productRating();
+    sumPrice();
+    counter();
 })
 
 function arrowAnimate() {
     const selectItem = document.querySelector('select');
-    const selectBlock = document.querySelector('.accordion');
+    const selectBlock = document.querySelector('.language_items');
 
     selectItem.addEventListener ('click', () => {
         selectBlock.classList.toggle('menu_active');
@@ -38,30 +39,65 @@ function sliderSwiper() {
     })
 }
 
-function modalOpen() {
-    const modalButton = document.querySelector('.reviews__button');
-    const modalWindow = document.querySelector('body');
-    const cross = document.querySelector('.cross');
+function productRating() {
+    document.querySelectorAll(".rating").forEach(ratingBlock => {
+        let ratingValue = parseInt(ratingBlock.getAttribute("data-rating"), 10);
+        let stars = ratingBlock.querySelectorAll(".star");
 
-    modalButton.addEventListener('click', (e) => {
-        modalWindow.classList.add('open_modal');
-    })
+        stars.forEach(star => {
+            let starValue = parseInt(star.getAttribute("data-value"), 10);
+            if (starValue <= ratingValue) {
+                star.classList.add("active");
+            }
+        });
+    });
+}
 
-    cross.addEventListener('click', () => {
-        modalWindow.classList.remove('open_modal');
-    })
+function sumPrice() {  
+    let total = 0;  
+
+    document.querySelectorAll(".price-value").forEach((element) => {  
+        let priceText = element.textContent.replace(/[^\d]/g, '');  
+        let price = parseFloat(priceText);  
+
+        if (!isNaN(price)) {  
+            total += price;  
+        }  
+    });  
+
+    let formattedTotal = total.toLocaleString("ru-RU");  
+    let sumElement = document.querySelector(".sum-price-value");  
+
+    if (sumElement) {  
+        sumElement.setAttribute("data-value", total);  
+        sumElement.textContent = `${formattedTotal} р`;  
+    }  
+ 
+    let discountPercentage = 0.10;
+    let discountAmount = total * discountPercentage;  
+    let finalPrice = total - discountAmount;   
+    let difference = total - finalPrice;   
+    let formattedDifference = difference.toLocaleString("ru-RU");  
+    let differenceElement = document.querySelector(".sum-discount-value");  
+
+    if (differenceElement) {  
+        differenceElement.textContent = `${formattedDifference} руб`;  
+    }  
 }
 
 
-// function changeCursor() {
-//     const blockItem = document.querySelector('.slider__block');
+function counter() {
+    document.querySelectorAll('.footer__menu_link[data-count]').forEach(item => {
+        let count = parseInt(item.getAttribute('data-count'), 10);
+        if (count > 0) {
+            let badge = document.createElement('span');
+            badge.classList.add('counter');
+            badge.textContent = count;
+            item.appendChild(badge);
+            item.removeAttribute('data-count');
+        }
+    });
+}
 
-//     blockItem.addEventListener('mousedown', () => {
-//         this.classList.add('click_active');
-//     })
 
-//     blockItem.addEventListener('mouseup', () => {
-//         this.classList.remove('click_active');
-//     })
-// }
 

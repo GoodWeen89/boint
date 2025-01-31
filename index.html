@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/icon_site.png" type="image/png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
     <title>Boint</title>
 </head>
 <body>
@@ -128,112 +128,260 @@
                 </div>
                 <div class="product__items">
                     <div class="slider__block">
-                        <div class="slider">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./img/img1.png" alt="#">
+                                        <img class="slide_img" src="./img/img1.png" alt="Image 1">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/img2.png" alt="#">
+                                        <img class="slide_img" src="./img/img2.png" alt="Image 2">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/img3.png" alt="#">
+                                        <img class="slide_img" src="./img/img3.png" alt="Image 3">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/img4.png" alt="#">
+                                        <img class="slide_img" src="./img/img4.png" alt="Image 4">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/img5.png" alt="#">
+                                        <img class="slide_img" src="./img/img5.png" alt="Image 5">
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <div class="swiper-pagination dots"></div>
                     </div>
                     <div class="product__info">
-                        <ul class="info__block">
-                            <li><p>Автоматических программ</p><span>90</span></li>
-                            <li><p>Габаритные размеры (В*Ш*Г)</p><span>455*594*567 мм</span></li>
-                            <li><p>Размер ниши (В*Ш*Г)</p><span>448*560*550 мм</span></li>
-                            <li><p>Конвекция</p><span>Да</span></li>
-                            <li><p>Режимы работы духовки</p><span>11</span></li>
-                            <li><p>Защита от детей</p><span>Да</span></li>
-                            <li><a href="#">Все характеристики</a></li>
-                        </ul>
-                        <a href="#">Консультация специалиста</a>
+                        <div class="info__blocks">
+                            <div class="characteristics_block">
+                                <div class="info__block">
+                                    <p>Автоматических программ</p>
+                                    <p>Габаритные размеры (В*Ш*Г)</p>
+                                    <p>Размер ниши (В*Ш*Г)</p>
+                                    <p>Конвекция</p>
+                                    <p>Режимы работы духовки</p>
+                                    <p>Защита от детей</p>
+                                </div>
+                                <div class="info__block">
+                                    <p>90</p>
+                                    <p>455*594*567 мм</p>
+                                    <p>448*560*550 мм</p>
+                                    <p>Да</p>
+                                    <p>11</p>
+                                    <p>Да</p>
+                                </div>
+                            </div>
+                            <a class="info__block_button" href="#">Все характеристики</a>
+                        </div>
+                        <a class="product__info_button" href="#"><span>Консультация специалиста</span></a>
                     </div>
                 </div>
             </div>
-            <div class="card__block">
-
+            <div class="card__block_wrap">
+                <div class="card__block">
+                    <div class="card__block_offer">
+                        <p>Скидка</p>
+                        <p>Рассрочка 2400</p>
+                        <p>Новинка</p>
+                    </div>
+                    <div class="card__block_price">
+                        <div class="price">
+                            <p>62 990 Р</p>
+                            <span></span>
+                        </div>
+                        <p>64 900 р</p>
+                    </div>
+                    <p>Нашли дешевле? Снизим цену!</p>
+                    <div class="card__block_radio">
+                        <div class="radio_group radio_media">
+                            <p>Цвет</p>
+                            <label class="color_radio">
+                                <input type="radio" name="color" checked/>
+                                <span style="background-color: #7A7C89;"></span>
+                            </label>
+                            <label class="color_radio">
+                                <input type="radio" name="color"/>
+                                <span style="background-color: #2C2728;"></span>
+                            </label>
+                        </div>
+                        <div class="radio_group radio_media">
+                            <p>Мощность</p>
+                            <label class="power_radio">
+                                <input type="radio" name="power" checked/>
+                                <span>900 Вт</span>
+                            </label>
+                            <label class="power_radio">
+                                <input type="radio" name="power"/>
+                                <span>1 200 Вт</span>
+                            </label>
+                            <label class="power_radio">
+                                <input type="radio" name="power"/>
+                                <span>1 500 Вт</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card__block_buttons">
+                        <button class="card__block_button btn"><span>В корзину</span></button>
+                        <button class="card__block_button btn-transparent">Купить в один клик</button>
+                    </div>
+                </div>
+                <div class="delivery__block">
+                    <p>Доставка в <span>Санкт-Петербург</span> завтра и позже, 350 Р + <span>2 100</span>  
+                        Бонусных рублей</p>
+                    <div class="stamp">
+                        <p>Без переплаты</p>
+                        <span>2 531 Р</span>
+                        <p>в месяц</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="serivices">
+            <div class="services__wrap">
+                <div class="servises__block">
+                    <h2 class="servises__block_title">Установка электрического шкафа</h2>
+                </div>
+                <div class="servises__block">
+                    <p class="servises__block_text">Наши специалисты произведут установку
+                        быстро и качественно в удобное для Вас время</p>
+                </div>
+                <div class="servises__block">
+                    <span class="servises__block_price">2 190 Р</span>
+                    <button class="servises__block_button btn">Купить с товаром</button>
+                </div>
+            </div>
+        </section>
+        <section class="kit">
+            <div class="kit__wrap">
+                <div class="kit__card">
+                    <div class="card__block_offer kit_offer">
+                        <p>Скидка</p>
+                        <p>Рассрочка 2400</p>
+                    </div>
+                    <img src="./img/img_card1.jpg" alt="">
+                    <div class="card__block_name">
+                        <h2>Electrolux EZB52430AX
+                            Духовой шкаф</h2>
+                        <p>Electrolux</p>
+                    </div>
+                    <div class="rating" data-rating="4">
+                        <div class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="card__block_price kit_price">
+                        <div class="price">
+                            <p class="price-value">19 989 р</p>
+                            <span></span>
+                        </div>
+                        <p>21 900 р</p>
+                    </div>
+                </div>
+                <div class="kit__card">
+                    <div class="card__block_offer kit_offer">
+                        <p>Скидка</p>
+                        <p>Рассрочка 2400</p>
+                    </div>
+                    <img src="./img/img_card2.jpg" alt="">
+                    <div class="card__block_name">
+                        <h2>Zigmund & Shtain K 002
+                            Вытяжка</h2>
+                        <p>Zigmund</p>
+                    </div>
+                    <div class="rating" data-rating="3">
+                        <div class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="card__block_price kit_price">
+                        <div class="price">
+                            <p class="price-value">6 899 р</p>
+                            <span></span>
+                        </div>
+                        <p>24 900 р</p>
+                    </div>
+                </div>
+                <div class="kit__card">
+                    <div class="card__block_offer kit_offer">
+                        <p>Скидка</p>
+                        <p>Рассрочка 2400</p>
+                    </div>
+                    <img src="./img/img_card3.jpg" alt="">
+                    <div class="card__block_name">
+                        <h2>Bosch PNP6B6B80
+                            Варочная панель</h2>
+                        <p>Bosch</p>
+                    </div>
+                    <div class="rating" data-rating="5">
+                        <div class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="card__block_price kit_price">
+                        <div class="price">
+                            <p class="price-value">18 989 р</p>
+                            <span></span>
+                        </div>
+                        <p>23 900 р</p>
+                    </div>
+                </div>
+                <div class="kit__card last_card">
+                    <div class="last_card_title">
+                        <h2>Комплект КБТ</h2>
+                        <div class="last_card_title_info">
+                            <span>i
+                                <p class="title_info_text">Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. Dolor aperiam, veniam expedita 
+                                    velit labore quisquam autem incidunt ducimus. Veniam, 
+                                    voluptatum.</p>
+                            </sapn>
+                        </div>
+                    </div>
+                    <div class="last_card_info">
+                        <p>Приобретая данный комплект
+                            вы получаете скидку на каждую 
+                            единицу кухонной бытовой 
+                            техники.</p>
+                        <span>Выгода <b class="sum-discount-value">15 760 руб.</b></span>
+                    </div>
+                    <div class="card__block_price last_card_price">
+                        <div class="price">
+                            <p class="sum-price-value"></p>
+                            <span></span>
+                        </div>
+                        <span class="discoutn" data-value="10">Ваша скидка 10%</span>
+                    </div>
+                    <div class="card__block_buttons last_card_buttons">
+                        <button class="last_card_button btn"><span>Купить комплект</span></button>
+                        <button class="last_card_button btn-transparent">Редактировать</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <div class="modal__reviews">
-        <div class="cross"></div>
-        <div class="modal__block">
-            <h2 class="title__modal"><span>23</span> отзыва</h2>
-            <div class="block__item">
-                <img src="./img/Young_John_T2.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Жора Корнев</span>
-                    <p>Ты че гонишь так, дядя Вова? Не в селухе на мопеде!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/images.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Вован</span>
-                    <p>А хули?!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/Young_John_T2.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Жора Корнев</span>
-                    <p>Э нет Вован! Так не пойдет... Нужно лексикон розширить!!! А то что не скажишь, то нахуй, то хули. Скажи лучше, увы! А если совсем не согласен, скажы отнють!!! А если хочешь отшить кого то... скажи... Уйди постылый, сгинь!!!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/images.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Вован</span>
-                    <p>Уйди постылый... сгинь!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/Young_John_T2.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Жора Корнев</span>
-                    <p>Да, но... можешь одно словечко можешь от себя дабавить, только не больше.</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/images.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Вован</span>
-                    <p>Уйди, постылый... нахуй!!!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/Young_John_T2.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Жора Корнев</span>
-                    <p>Уже лучше, ты просто лингвист, мать твою!</p>
-                </div>
-            </div>
-            <div class="block__item">
-                <img src="./img/images.jpg" alt="" class="foto">
-                <div class="review">
-                    <span>Вован</span>
-                    <p>А хули!.. Увы!</p>
-                </div>
-            </div>
+    <footer>
+        <div class="footer__wrap"> 
+            <ul class="footer__menu">
+                <li><a href="#" class="footer__menu_link">Описание</a></li>
+                <li><a href="#" class="footer__menu_link">Характеристики</a></li>
+                <li><a href="#" class="footer__menu_link">Аксессуары</a></li>
+                <li><a href="#" class="footer__menu_link" data-count="5">Обзоры</a></li>
+                <li><a href="#" class="footer__menu_link" data-count="24">Отзывы</a></li>
+                <li><a href="#" class="footer__menu_link" data-count="5">Вопросы</a></li>
+            </ul>
         </div>
-    </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
-
 </html>

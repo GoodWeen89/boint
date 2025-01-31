@@ -12,6 +12,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   min-width: 320px;
+
+  @media (max-width: 650px) {
+    overflow-x: hidden;
+  }
 }
 
 form {
@@ -126,7 +130,7 @@ a {
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
-  color: #2C2728;
+  color: $main-color;
 }
 
 p {
