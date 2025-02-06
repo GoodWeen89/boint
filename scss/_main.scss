@@ -474,7 +474,7 @@
 
         @media (max-width: 450px) {
             width: 60px;
-            height: 60px;
+            height: 50px;
         }
     }
 
@@ -488,7 +488,7 @@
 
         @media (max-width: 450px) {
             width: 60px;
-            height: 60px;
+            height: 50px;
         }
     }
 
@@ -502,7 +502,7 @@
 
         @media (max-width: 450px) {
             width: 60px;
-            height: 60px;
+            height: 50px;
         }
     }
 
@@ -516,7 +516,7 @@
 
         @media (max-width: 450px) {
             width: 60px;
-            height: 60px;
+            height: 50px;
         }
     }
 
@@ -530,7 +530,7 @@
 
         @media (max-width: 450px) {
             width: 60px;
-            height: 60px;
+            height: 50px;
         }
     }
 }
@@ -676,6 +676,10 @@
     @media (max-width: 650px) {
         padding: 15px;
     }
+
+    @media (max-width: 450px) {
+        font-size: 15px;
+    }
 }
 
 .product__info_button {
@@ -702,6 +706,11 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='26' fill='none'%3E%3Cg stroke='%23FF5328' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.6' clip-path='url(%23a)'%3E%3Cpath d='M21.7 24.7v-2.6c0-1.4-.5-2.7-1.5-3.7a5 5 0 0 0-3.6-1.5H6.4a5 5 0 0 0-3.6 1.5c-1 1-1.5 2.3-1.5 3.7v2.6M11.5 11.7c2.8 0 5.1-2.3 5.1-5.2 0-2.9-2.3-5.2-5.1-5.2a5.2 5.2 0 0 0-5.1 5.2c0 2.9 2.3 5.2 5.1 5.2Z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h23v26H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
             width: 23px;
             height: 23px;
+
+            @media (max-width: 450px) {
+                top: -4px;
+                left: -35px;
+            }
         }
     }
 
@@ -713,6 +722,10 @@
     @media (max-width: 650px) {
         font-size: 17px;
         padding: 15px 27px 15px 65px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 15px;
     }
 }
 
@@ -1879,6 +1892,10 @@ footer {
         background-color: $orange-color;
         left: 0;
         bottom: -2px;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 16px;
     }
 }
 
